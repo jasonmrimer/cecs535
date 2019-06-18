@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54df2414-cd09-457c-b925-5a02453c9fce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/740b948b-ec8f-4c96-93d3-cd70fdeeb220.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/740b948b-ec8f-4c96-93d3-cd70fdeeb220/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/740b948b-ec8f-4c96-93d3-cd70fdeeb220/storage_v2/_src_/schema/main.uQUzAA.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/hw1/HW1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/homework/hw1/HW1.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/problemset/PS2/PS2-2017.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/problemset/PS2/stanford PS2-2017.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problemset/PS2/PS2-2017.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/problemset/PS2/PS2-2017.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/problemset/PS2/queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/problemset/PS2/queries.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,45 +34,22 @@
     </expanded>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/problemset/PS2/PS2-2017.ipynb">
-              <provider selected="true" editor-type-id="jupyter-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/problemset/PS2/queries.sql">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="646">
-                  <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/problemset/PS2/PS2-2017 given.ipynb">
-              <provider selected="true" editor-type-id="jupyter-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/problemset/PS2/stanford PS2-2017.ipynb">
-              <provider selected="true" editor-type-id="jupyter-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/problemset/PS2/PS2-2017.ipynb">
-              <provider selected="true" editor-type-id="jupyter-editor" />
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/problemset/PS2/PS2-2017.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/problemset/PS2/queries.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="634">
+              <caret line="68" column="6" selection-start-line="48" selection-end-line="69" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -252,7 +222,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="SQLite" />
-    <property name="database.console.LAST_STATE" value="false" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/problemset/PS1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -325,12 +295,12 @@
       <workItem from="1559266841131" duration="232000" />
       <workItem from="1559780527931" duration="13000" />
       <workItem from="1560002380553" duration="131000" />
-      <workItem from="1560873224233" duration="3294000" />
+      <workItem from="1560873224233" duration="4500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31177000" />
+    <option name="totallyTimeSpent" value="32383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -357,12 +327,12 @@
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3294753" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.3294753" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.3294753" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="13" weight="0.3294753" />
-      <window_info anchor="bottom" id="Database Console" order="14" weight="0.3912037" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="14" visible="true" weight="0.3912037" />
       <window_info anchor="right" id="Database" order="0" visible="true" weight="0.011914218" />
       <window_info anchor="right" id="SciView" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
@@ -484,18 +454,18 @@
     <entry file="file://$PROJECT_DIR$/problemset/PS2/submit.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/problemset/PS2/queries.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/problemset/PS2/PS2-2017 given.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/problemset/PS2/stanford PS2-2017.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/problemset/PS2/queries.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="68" column="6" selection-start-line="48" selection-end-line="69" selection-end-column="7" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/problemset/PS2/PS2-2017.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
