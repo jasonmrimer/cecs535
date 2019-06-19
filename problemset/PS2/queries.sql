@@ -520,3 +520,50 @@ values (2, 4, 7),
        (2, 4, 8),
        (3, 4, 8),
        (2, 5, 7);
+
+-- ### Part (c)
+-- **_[10 points]_**
+-- Create $A$, $B$ and $C$ such that the MVD $Z\twoheadrightarrow X$ holds in $A$, but not in $B$ or $C$.  If you believe that $B$ and/or $C$ cannot be created, provide them as an empty table.
+DROP TABLE IF EXISTS A;
+DROP TABLE IF EXISTS B;
+DROP TABLE IF EXISTS C;
+
+DROP TABLE IF EXISTS A;
+DROP TABLE IF EXISTS B;
+DROP TABLE IF EXISTS C;
+create table A
+(
+    X int,
+    Y int,
+    Z int
+);
+create table B
+(
+    X int,
+    Y int,
+    Z int
+);
+create table C
+(
+    X int,
+    Y int,
+    Z int
+);
+
+insert into A
+values (1, 4, 7),
+       (2, 5, 7),
+       (2, 4, 7),
+       (1, 5, 7);
+
+insert into B
+values (1, 4, 7),
+       (2, 5, 7),
+       (2, 4, 7);
+
+insert into C
+values (1, 4, 7),
+       (2, 5, 7),
+       (2, 4, 7),
+       (1, 5, 7),
+       (3, 4, 7);
