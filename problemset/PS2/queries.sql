@@ -93,20 +93,56 @@ CREATE TABLE S
     E INT
 );
 insert into S
-values (8, 2, 8, 4, 5),
-       (1, 2, 4, 6, 7),
-       (1, 2, 3, 5, 7),
-       (1, 2, 3, 5, 7),
-       (3, 3, 5, 5, 6),
-       (2, 3, 7, 6, 7),
-       (3, 3, 5, 7, 7),
-       (3, 4, 5, 6, 7),
-       (3, 5, 5, 6, 7);
+values (7, 2, 7, 4, 4),
+       (9, 2, 9, 5, 5),
+       (7, 2, 7, 5, 5),
+       (9, 3, 9, 4, 4);
 
 -- t[B] = u[B]
 -- v[B] = t[B]
 -- v[DE] = t[DE]
 -- v[AC] = u[AC]
+-- try splitting into 3 tables: "everything is a table" method
+
+select *
+    from
+       S s1,
+       S s2
+    where
+       s1.B = s2.B;
+
+-- not breaking when mvd removed, think I need both ^ and v
+select *
+    from
+       S s1,
+       S s2,
+       S s3
+    where
+       s1.B = s2.B
+           and s1.B = s3.B
+           and s3.D = s1.D
+           and s3.E = s1.E
+           and s3.A = s2.A
+           and s3.C = s2.C;
+
+select S1.*
+    from
+       S s1,
+       S s2
+    where
+       s1.B = s2.B and not exists(
+               select *
+                   from S s3
+                   where s1.B = s2.B
+                          and s1.B = s3.B
+                          and s3.D = s1.D
+                          and s3.E = s1.E
+                          and s3.A = s2.A
+                          and s3.C = s2.C
+           );
+
+
+
 
 select A,
        B,
