@@ -43,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/problemset/PS2/queries.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="311" selection-start-line="311" selection-end-line="339" selection-end-column="17" />
+            <state relative-caret-position="707">
+              <caret line="522" lean-forward="true" selection-start-line="489" selection-end-line="522" />
             </state>
           </provider>
         </entry>
@@ -305,12 +305,12 @@
       <workItem from="1559266841131" duration="232000" />
       <workItem from="1559780527931" duration="13000" />
       <workItem from="1560002380553" duration="131000" />
-      <workItem from="1560873224233" duration="15230000" />
+      <workItem from="1560873224233" duration="15884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43113000" />
+    <option name="totallyTimeSpent" value="43767000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -478,8 +478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/problemset/PS2/queries.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="311" selection-start-line="311" selection-end-line="339" selection-end-column="17" />
+        <state relative-caret-position="707">
+          <caret line="522" lean-forward="true" selection-start-line="489" selection-end-line="522" />
         </state>
       </provider>
     </entry>

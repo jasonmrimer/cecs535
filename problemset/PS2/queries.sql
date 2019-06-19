@@ -20,10 +20,15 @@ values (1, 2, 3, 4),
        (2, 7, 3, 5);
 
 -- x,y would fail to be a superkey if any tuple repeats
-select X, Y
-from R
-group by X, Y
-having count(*) > 1;
+select X,
+       Y
+    from
+       R
+    group by
+       X,
+       Y
+    having
+       count(*) > 1;
 
 -- ### Part (b)
 -- **_[5 points]_**
@@ -47,27 +52,27 @@ values (1, 2, 1, 2),
 
 -- there should not be duplicates of any
 select *
-from (
-         select W as Duplicate_Key
-         from R
-         group by W
-         having count(*) > 1
-         union
-         select X as Duplicate_Key
-         from R
-         group by X
-         having count(*) > 1
-         union
-         select Y as Duplicate_Key
-         from R
-         group by Y
-         having count(*) > 1
-         union
-         select Z as Duplicate_Key
-         from R
-         group by Z
-         having count(*) > 1
-     );
+    from (
+           select W     as Duplicate_Key
+               from R
+               group by W
+               having count(*) > 1
+               union
+               select X as Duplicate_Key
+               from R
+               group by X
+               having count(*) > 1
+               union
+               select Y as Duplicate_Key
+               from R
+               group by Y
+               having count(*) > 1
+               union
+               select Z as Duplicate_Key
+               from R
+               group by Z
+               having count(*) > 1
+       );
 
 
 -- ### Part (c)
@@ -103,187 +108,317 @@ values (8, 2, 8, 4, 5),
 -- v[DE] = t[DE]
 -- v[AC] = u[AC]
 
-select A, B, C, D, E
-from S,
-     (
-         select B multi_b
-         from S
-         group by B
-         having count(*) > 2
-     )
-where S.B = multi_b;
+select A,
+       B,
+       C,
+       D,
+       E
+    from
+       S,
+       (
+           select B multi_b
+               from S
+               group by B
+               having count(*) > 2
+       )
+    where
+       S.B = multi_b;
 
-select A, B, C, D, E
-from S,
-     (
-         select D multi_d, E multi_e
-         from S
-         group by D, E
-         having count(*) > 1
-     )
-where S.D = multi_d;
+select A,
+       B,
+       C,
+       D,
+       E
+    from
+       S,
+       (
+           select D multi_d,
+                  E multi_e
+               from
+                  S
+               group by
+                  D,
+                  E
+               having
+                  count(*) > 1
+       )
+    where
+       S.D = multi_d;
 
 -- get DE to match
 
-select A, B, C, D, E
-from (
-         select A, B, C, D, E
-         from S,
-              (
-                  select B multi_b
-                  from S
-                  group by B
-                  having count(*) > 2
-              )
-         where S.B = multi_b
-     )
-group by D, E
-having count(*) > 1;
+select A,
+       B,
+       C,
+       D,
+       E
+    from
+       (
+           select A,
+                  B,
+                  C,
+                  D,
+                  E
+               from
+                  S,
+                  (
+                      select B multi_b
+                          from S
+                          group by B
+                          having count(*) > 2
+                  )
+               where
+                  S.B = multi_b
+       )
+    group by
+       D,
+       E
+    having
+       count(*) > 1;
 
 -- B & DE match
-select S.A, S.B, S.C, S.D, S.E
-from S,
-     (
-         select B multi_b, D multi_d, E multi_e
-         from (
-                  select B, D, E
-                  from S,
-                       (
-                           select B multi_b
-                           from S
-                           group by B
-                           having count(*) > 2
-                       )
-                  where S.B = multi_b
-              )
-         group by B, D, E
-         having count(*) > 1
-     )
-where S.D = multi_d
-  and S.E = multi_e
-  and S.B = multi_b;
+select S.A,
+       S.B,
+       S.C,
+       S.D,
+       S.E
+    from
+       S,
+       (
+           select B multi_b,
+                  D multi_d,
+                  E multi_e
+               from
+                  (
+                      select B,
+                             D,
+                             E
+                          from
+                             S,
+                             (
+                                 select B multi_b
+                                     from S
+                                     group by B
+                                     having count(*) > 2
+                             )
+                          where
+                             S.B = multi_b
+                  )
+               group by
+                  B,
+                  D,
+                  E
+               having
+                  count(*) > 1
+       )
+    where
+       S.D = multi_d
+           and S.E = multi_e
+           and S.B = multi_b;
 
 -- find if an B & AC match
-select S.A, S.B, S.C, S.D, S.E
-from S,
-     (
-         select A multi_a, B multi_b, C multi_c
-         from (
-                  select A, B, C
-                  from S,
-                       (
-                           select B multi_b
-                           from S
-                           group by B
-                           having count(*) > 2
-                       )
-                  where S.B = multi_b
-              )
-         group by A, B, C
-         having count(*) > 1
-     )
-where S.A = multi_a
-  and S.B = multi_b
-  and S.C = multi_c;
+select S.A,
+       S.B,
+       S.C,
+       S.D,
+       S.E
+    from
+       S,
+       (
+           select A multi_a,
+                  B multi_b,
+                  C multi_c
+               from
+                  (
+                      select A,
+                             B,
+                             C
+                          from
+                             S,
+                             (
+                                 select B multi_b
+                                     from S
+                                     group by B
+                                     having count(*) > 2
+                             )
+                          where
+                             S.B = multi_b
+                  )
+               group by
+                  A,
+                  B,
+                  C
+               having
+                  count(*) > 1
+       )
+    where
+       S.A = multi_a
+           and S.B = multi_b
+           and S.C = multi_c;
 
 
 -- opposite, returns empty set if there is NO MVD
 select *
-from (
-         select S.A, S.B, S.C, S.D, S.E
-         from S,
-              (
-                  select A multi_a, C multi_c
-                  from (
-                           select A, C
-                           from S,
-                                (
-                                    select B multi_b
-                                    from S
-                                    group by B
-                                    having count(*) > 2
-                                )
-                           where S.B = multi_b
-                       )
-                  group by A, C
-                  having count(*) > 1
-              )
-         where S.A = multi_a
-           and S.C = multi_c
-     )
-where exists
-          (
-              select S.A, S.B, S.C, S.D, S.E
-              from S,
-                   (
-                       select D, E
-                       from (
-                                select A, B, C, D, E
-                                from S,
-                                     (
-                                         select B multi_b
-                                         from S
-                                         group by B
-                                         having count(*) > 2
-                                     )
-                                where S.B = multi_b
-                            )
-                       group by D, E
-                       having count(*) > 1) multi
-              where S.D = multi.D
-                and S.E = multi.E
-          );
+    from (
+           select S.A,
+                  S.B,
+                  S.C,
+                  S.D,
+                  S.E
+               from
+                  S,
+                  (
+                      select A multi_a,
+                             C multi_c
+                          from
+                             (
+                                 select A,
+                                        C
+                                     from
+                                        S,
+                                        (
+                                            select B multi_b
+                                                from S
+                                                group by B
+                                                having count(*) > 2
+                                        )
+                                     where
+                                        S.B = multi_b
+                             )
+                          group by
+                             A,
+                             C
+                          having
+                             count(*) > 1
+                  )
+               where
+                  S.A = multi_a
+                      and S.C = multi_c
+       )
+    where exists
+           (
+               select S.A,
+                      S.B,
+                      S.C,
+                      S.D,
+                      S.E
+                   from
+                      S,
+                      (
+                          select D,
+                                 E
+                              from
+                                 (
+                                     select A,
+                                            B,
+                                            C,
+                                            D,
+                                            E
+                                         from
+                                            S,
+                                            (
+                                                select B multi_b
+                                                    from S
+                                                    group by B
+                                                    having count(*) > 2
+                                            )
+                                         where
+                                            S.B = multi_b
+                                 )
+                              group by
+                                 D,
+                                 E
+                              having
+                                 count(*) > 1) multi
+                   where
+                      S.D = multi.D
+                          and S.E = multi.E
+           );
 
 
 -- attempt 2
 select *
-from (
-         select S.A, S.B, S.C, S.D, S.E
-         from S,
-              (
-                  select A multi_a, B multi_b, C multi_c
-                  from (
-                           select A, B, C
-                           from S,
-                                (
-                                    select B multi_b
-                                    from S
-                                    group by B
-                                    having count(*) > 2
-                                )
-                           where S.B = multi_b
-                       )
-                  group by A, B, C
-                  having count(*) > 1
-              )
-         where S.A = multi_a
-           and S.B = multi_b
-           and S.C = multi_c
-     )
-where exists
-          (
-              select S.A, S.B, S.C, S.D, S.E
-              from S,
-                   (
-                       select B multi_b, D multi_d, E multi_e
-                       from (
-                                select B, D, E
-                                from S,
-                                     (
-                                         select B multi_b
-                                         from S
-                                         group by B
-                                         having count(*) > 2
-                                     )
-                                where S.B = multi_b
-                            )
-                       group by B, D, E
-                       having count(*) > 1
-                   )
-              where S.D = multi_d
-                and S.E = multi_e
-                and S.B = multi_b
-          );
+    from (
+           select S.A,
+                  S.B,
+                  S.C,
+                  S.D,
+                  S.E
+               from
+                  S,
+                  (
+                      select A multi_a,
+                             B multi_b,
+                             C multi_c
+                          from
+                             (
+                                 select A,
+                                        B,
+                                        C
+                                     from
+                                        S,
+                                        (
+                                            select B multi_b
+                                                from S
+                                                group by B
+                                                having count(*) > 2
+                                        )
+                                     where
+                                        S.B = multi_b
+                             )
+                          group by
+                             A,
+                             B,
+                             C
+                          having
+                             count(*) > 1
+                  )
+               where
+                  S.A = multi_a
+                      and S.B = multi_b
+                      and S.C = multi_c
+       )
+    where exists
+           (
+               select S.A,
+                      S.B,
+                      S.C,
+                      S.D,
+                      S.E
+                   from
+                      S,
+                      (
+                          select B multi_b,
+                                 D multi_d,
+                                 E multi_e
+                              from
+                                 (
+                                     select B,
+                                            D,
+                                            E
+                                         from
+                                            S,
+                                            (
+                                                select B multi_b
+                                                    from S
+                                                    group by B
+                                                    having count(*) > 2
+                                            )
+                                         where
+                                            S.B = multi_b
+                                 )
+                              group by
+                                 B,
+                                 D,
+                                 E
+                              having
+                                 count(*) > 1
+                      )
+                   where
+                      S.D = multi_d
+                          and S.E = multi_e
+                          and S.B = multi_b
+           );
 
 -- ### Part (b)
 -- **_[10 points]_**
@@ -294,7 +429,13 @@ where exists
 -- BC -> D
 -- AB+ = ABCD;
 DROP TABLE IF EXISTS T;
-CREATE TABLE T (A int, B int, C int, D int);
+CREATE TABLE T
+(
+    A int,
+    B int,
+    C int,
+    D int
+);
 insert into T
 values (1, 2, 5, 4),
        (1, 3, 5, 6),
@@ -329,13 +470,53 @@ create table C
 );
 
 insert into A
-values
-       (1, 4, 7),
+values (1, 4, 7),
        (2, 5, 8);
 
 insert into C
-values
-       (1, 4, 7),
+values (1, 4, 7),
        (2, 5, 8),
        (1, 4, 8);
 
+-- ### Part (b)
+-- **_[10 points]_**
+-- Create $A$, $B$ and $C$ such that ONLY the functional dependencies $\{Z\} \rightarrow \{Y\}$ and $\{X,Z\} \rightarrow \{Y\}$ hold on $B$, ONLY the functional dependency $\{X,Z\} \rightarrow \{Y\}$ holds on $A$ and NO functional dependencies hold on $C$. If you believe $B$ and/or $C$ cannot be created, provide them as an empty table.
+-- A: X,Z -> Y
+-- B: Z -> Y; X,Z -> Y
+-- C: none
+DROP TABLE IF EXISTS A;
+DROP TABLE IF EXISTS B;
+DROP TABLE IF EXISTS C;
+create table A
+(
+    X int,
+    Y int,
+    Z int
+);
+create table B
+(
+    X int,
+    Y int,
+    Z int
+);
+create table C
+(
+    X int,
+    Y int,
+    Z int
+);
+
+insert into A
+values (2, 4, 7),
+       (2, 4, 8),
+       (3, 4, 8);
+
+insert into B
+values (2, 4, 7),
+       (2, 4, 8);
+
+insert into C
+values (2, 4, 7),
+       (2, 4, 8),
+       (3, 4, 8),
+       (2, 5, 7);
