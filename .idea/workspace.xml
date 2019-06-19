@@ -43,10 +43,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/problemset/PS2/queries.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="68" column="6" selection-start-line="48" selection-end-line="69" selection-end-column="7" />
+            <state relative-caret-position="127">
+              <caret line="311" selection-start-line="311" selection-end-line="339" selection-end-column="17" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lectures/lecture-5-6/MVDs.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/problemset/PS2/PS2-2017 given.ipynb">
+          <provider selected="true" editor-type-id="jupyter-editor" />
         </entry>
       </file>
     </leaf>
@@ -72,8 +82,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1280" />
-    <option name="y" value="23" />
+    <option name="x" value="1279" />
+    <option name="y" value="24" />
     <option name="width" value="1280" />
     <option name="height" value="1388" />
   </component>
@@ -295,12 +305,12 @@
       <workItem from="1559266841131" duration="232000" />
       <workItem from="1559780527931" duration="13000" />
       <workItem from="1560002380553" duration="131000" />
-      <workItem from="1560873224233" duration="4500000" />
+      <workItem from="1560873224233" duration="15230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32383000" />
+    <option name="totallyTimeSpent" value="43113000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -316,7 +326,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11556791" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.11556791" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Jupyter" order="1" sideWeight="0.49919224" weight="0.3294753" />
@@ -454,16 +464,22 @@
     <entry file="file://$PROJECT_DIR$/problemset/PS2/submit.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/problemset/PS2/stanford PS2-2017.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lectures/lecture-5-6/closure.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/problemset/PS2/PS2-2017 given.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/problemset/PS2/stanford PS2-2017.ipynb">
+    <entry file="file://$PROJECT_DIR$/lectures/lecture-5-6/MVDs.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/problemset/PS2/queries.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="68" column="6" selection-start-line="48" selection-end-line="69" selection-end-column="7" />
+        <state relative-caret-position="127">
+          <caret line="311" selection-start-line="311" selection-end-line="339" selection-end-column="17" />
         </state>
       </provider>
     </entry>
